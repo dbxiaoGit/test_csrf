@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <title>转账</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>正规转账页面</h1>
+    <form action="/transfer/" method="post">
+         {% csrf_token %}
+        <p>转出账户:
+            <input type="text" name="from_">
+        </p>
+        <p>转入账户:
+            <input type="text" name="to_">
+        </p>
+        <p>转账金额:
+            <input type="text" name="money">
+        </p>
+        <p>
+            <input type="submit" value="提交">
+        </p>
+    </form>
+
+</body>
+</html>
